@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
 
 })
 
-router.post('/', (req, res) => {
+router.post('/add-item', (req, res) => {
     var ser = new Services({
         image: req.body.image,
         name: req.body.name,

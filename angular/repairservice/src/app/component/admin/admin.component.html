@@ -1,9 +1,15 @@
 <h1>Admin Panel</h1>
-<button>Add User</button>
+<form [formGroup]="additem" novalidate >
+<input type="text" formControlName = "image" placeholder="Enter Image">
+<input type="text"  formControlName = "name" placeholder="Enter Name">
+<input type="text"  formControlName = "category" placeholder="Enter Category">
+<input type="text"  formControlName = "charge" placeholder="Enter Charge">
+<input type="text"  formControlName = "description"placeholder="Enter Description">
+<button (click) = "onSubmit()">Add-Edit</button>
+</form>
 <table class="content-table">
     <thead>
       <tr>
-        <th style="width: 2%">Image</th>
         <th style="width: 2%">Name</th>
         <th style="width: 2%">Category</th>
         <th style="width: 2%">Charge</th>
@@ -13,13 +19,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td >Domenic</td>
-        <td>88,110</td>
-        <td>dcode</td>
-        <td>lorem10</td>
-        <td><a href = ""><i class="fa-solid fa-pen-to-square"></i></a></td>
+      <tr *ngFor = "let item of loading">
+        <td >{{item.name}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.charge}}</td>
+        <td>{{item.description}}</td>
+        <td><a routerLink="/addedit"><i class="fa-solid fa-pen-to-square"></i></a></td>
         <td><a href = "#"><i class="fa-solid fa-trash"></i></a></td>
       </tr>
     </tbody>
