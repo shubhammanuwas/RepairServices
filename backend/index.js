@@ -7,6 +7,6 @@ var serviceController=require('./controllers/serviceController.js');
 var app= express();
 app.use(cors())
 app.use(bodyParser.json());
-app.listen(5000, ()=> console.log('Server started at port: 5000'));
+app.listen(4000, ()=> console.log('Server started at port: 8000'));
 
 app.use('/services',serviceController)
