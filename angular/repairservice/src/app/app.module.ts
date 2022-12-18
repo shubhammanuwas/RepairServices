@@ -10,6 +10,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { ItemsComponent } from './component/items/items.component';
 import { AddeditComponent } from './component/addedit/addedit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from './shared/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AdminComponent,
     HeaderComponent,
     ItemsComponent,
-    AddeditComponent
+    AddeditComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

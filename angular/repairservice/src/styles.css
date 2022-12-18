@@ -10,3 +10,6 @@
     --orange: #fc9615;
 
 }
+a,button{
+    cursor: pointer;
+}

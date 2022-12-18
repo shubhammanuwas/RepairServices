@@ -57,7 +57,10 @@ button{
 }
 input{
     padding: 1rem 2rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
     border-radius: 10px;
+}
+a{
+    cursor: pointer;
 }

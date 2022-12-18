@@ -11,7 +11,7 @@ import { ItemService } from 'src/app/service/item.service';
 export class AdminComponent implements OnInit {
   loading: any
   additem: any;
-  constructor(private itemService: ItemService, private fb: FormBuilder,routes: Router) {
+  constructor(private itemService: ItemService, private fb: FormBuilder,private routes: Router) {
     this.additem = fb.group(
     {
       image: ['',Validators.required],
@@ -36,6 +36,14 @@ export class AdminComponent implements OnInit {
     console.log(this.additem.value)
     this.itemService.additem(this.additem.value).subscribe((data:any)=>{
       console.log(data)
+      this.additem.reset()
+      this.loaditems()
+    })
+  }
+  delete(datas:any){
+    this.itemService.deleteStudent(datas._id).subscribe(data=>{
+      console.log(data)
+      this.loaditems()
     })
   }
 }

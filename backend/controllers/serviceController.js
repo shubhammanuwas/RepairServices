@@ -57,7 +57,7 @@ router.put('/:id', (req, res) => {
 })
 
 //delete
-router.delete('/:id',(req,res)=>{
+router.delete('/delete/:id',(req,res)=>{
     if (!ObjectId.isValid(req.params.id))
         return res.status(400).send(`No record with given id: ${req.params.id}`);
     
