@@ -8,12 +8,18 @@ export class ItemService {
   public search=new BehaviorSubject<String>("");
   constructor(private http: HttpClient) { }
   additem(item:any){
-    return this.http.post('http://localhost:5000/services/add-item',item)
+    return this.http.post('http://localhost:3000/services/add-item',item)
   }
   getItem(){
-    return this.http.get('http://localhost:5000/services')
+    return this.http.get('http://localhost:3000/services')
   }
   deleteStudent(id:any){
-    return this.http.delete('http://localhost:5000/services/delete/'+id)
+    return this.http.delete('http://localhost:3000/services/delete/'+id)
+  }
+  editData(id:any){
+    return this.http.get('http://localhost:3000/services/edit/'+id)
+  }
+  updateItem(id:any,data:any){
+    return this.http.put('http://localhost:3000/services/update/'+id,data)
   }
 }

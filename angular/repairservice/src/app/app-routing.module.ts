@@ -6,13 +6,15 @@ import { ItemsComponent } from './component/items/items.component';
 import { OrdersComponent } from './component/orders/orders.component';
 import { AdminComponent } from './component/admin/admin.component';
 import { AddeditComponent } from './component/addedit/addedit.component';
+import { EditComponent } from './component/edit/edit.component';
 const routes: Routes = [
     {path: '', redirectTo:'welcome',pathMatch:'full'},
     {path: 'welcome', component: WelcomeComponent},
     {path: 'items', component: ItemsComponent},
     {path: 'orders', component: OrdersComponent},
     {path: 'admin', component: AdminComponent},
-    {path: 'addedit', component: AddeditComponent}
+    {path: 'addedit', component: AddeditComponent},
+    {path: 'edit/:id', component: EditComponent}
 ];
 
 @NgModule({

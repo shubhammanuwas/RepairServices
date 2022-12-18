@@ -11,6 +11,7 @@ import { ItemsComponent } from './component/items/items.component';
 import { AddeditComponent } from './component/addedit/addedit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './shared/filter.pipe';
+import { EditComponent } from './component/edit/edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { FilterPipe } from './shared/filter.pipe';
     HeaderComponent,
     ItemsComponent,
     AddeditComponent,
-    FilterPipe
+    FilterPipe,
+    EditComponent
   ],
   imports: [
     BrowserModule,

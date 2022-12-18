@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 });
 
 //findByID
-router.get('/:id', (req, res) => {
+router.get('/edit/:id', (req, res) => {
     if (!ObjectId.isValid(req.params.id))
         return res.status(400).send(`No record with given id: ${req.params.id}`);
 
@@ -39,7 +39,7 @@ router.post('/add-item', (req, res) => {
 
 
 //update
-router.put('/:id', (req, res) => {
+router.put('/update/:id', (req, res) => {
     if (!ObjectId.isValid(req.params.id))
         return res.status(400).send(`No record with given id: ${req.params.id}`);
 

@@ -1,0 +1,8 @@
+<form [formGroup]="edititem" novalidate >
+    <input type="text" formControlName = "image" placeholder="Enter Image">
+    <input type="text"  formControlName = "name" placeholder="Enter Name">
+    <input type="text"  formControlName = "category" placeholder="Enter Category">
+    <input type="text"  formControlName = "charge" placeholder="Enter Charge">
+    <input type="text"  formControlName = "description"placeholder="Enter Description">
+    <button (click) = "updateItem()">Update</button>
+</form>
